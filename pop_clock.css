@@ -1,0 +1,132 @@
+.bg-overlay {
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* color: #fff; */
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.jumbotron {
+    background-color: rgba(199, 199, 199, 0.5) !important;
+    color: white;
+}
+
+.display-4 {
+    text-align: center;
+}
+
+.text-danger-50 {
+    color: lightcoral;
+}
+
+.text-success-50 {
+    color: lightseagreen;
+}
+
+.text-primary-50 {
+    color: lightsteelblue;
+}
+
+.text-stats {
+  color: lightsalmon;
+}
+
+.rule {
+    overflow: visible;
+    /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+.rule:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+.bg-overlay {
+    z-index: 1;
+    position: relative;
+}
+
+.jumbotron {
+    z-index: 1;
+    position: relative;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url('./img/worlds.jpg') 
+}
+
+.slideshow li:nth-child(2) { 
+  background-image: url('./img/money-map.jpg');
+  animation-delay: 10s; 
+}
+
+.slideshow li:nth-child(3) { 
+  background-image: url('./img/map-balls.jpg');
+  animation-delay: 20s; 
+}
+
+.slideshow li:nth-child(4) { 
+  background-image: url('./img/globe-map.jpg');
+  animation-delay: 30s; 
+}
+
+.slideshow li:nth-child(5) { 
+  background-image: url('./img/globe-image.jpg');
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
